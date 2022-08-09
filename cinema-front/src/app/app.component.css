@@ -1,0 +1,9 @@
+.navMenu{
+    display: flex;
+    
+}
+
+.navMenuPositon{
+    display: inline;
+    justify-content: space-between;
+}
