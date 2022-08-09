@@ -37,4 +37,10 @@ public class City implements Serializable {
     public void setCinemas(List<Cinema> cinemas) {
         this.cinemas = cinemas;
     }
+
+    public City(Long id, String name, Integer department) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+    }
 }

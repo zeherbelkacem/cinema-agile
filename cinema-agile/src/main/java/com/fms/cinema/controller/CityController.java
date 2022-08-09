@@ -5,6 +5,8 @@ import com.fms.cinema.service.CityServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/city")
@@ -39,6 +41,7 @@ public class CityController {
 
     /**
      * Delete city by id
+     *
      * @param id
      */
     @DeleteMapping("/delete/{id}")
@@ -46,11 +49,24 @@ public class CityController {
         cityService.delete(id);
     }
 
+    /**
+     * Return a city by id
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("/{id}")
-    public City getOne(@PathVariable("id") long id){
+    public City getOne(@PathVariable("id") long id) {
         return cityService.getOneById(id);
     }
 
-    //lister  des villes
+    /**
+     * Return list of all cities
+     * @return
+     */
+    @GetMapping("/all")
+    public List<City> getAll() {
+        return cityService.getAll();
+    }
 
 }

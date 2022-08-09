@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 @Service
 public class CityServiceImpl implements CityService {
 
@@ -26,5 +28,10 @@ public class CityServiceImpl implements CityService {
     @Override
     public void delete(long id) {
         cityRepository.deleteById(id);
+    }
+
+    @Override
+    public List<City> getAll() {
+        return cityRepository.findAll();
     }
 }
