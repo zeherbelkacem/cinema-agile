@@ -1,6 +1,8 @@
 package com.fms.cinema;
 
+import com.fms.cinema.entities.Cinema;
 import com.fms.cinema.entities.City;
+import com.fms.cinema.service.CinemaServiceImpl;
 import com.fms.cinema.service.CityServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -22,5 +24,6 @@ public class CinemaApplication implements CommandLineRunner {
 		cityService.add(new City(null, "Toulouse", 31));
 		cityService.add(new City(null, "Paris", 75));
 		cityService.add(new City(null, "Lyon", 69));
+
 	}
 }

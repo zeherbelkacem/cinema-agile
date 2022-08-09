@@ -87,23 +87,54 @@
                             <option th:each="c : ${cities}" th:text="${c.name}"></option>
                         </div>
 
-                    </select>
+                <div class="col-6">
+                    <form class="form-inline input-group">
+                        <input class="form-control mr-sm-2" name="keyWord" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
-                <div class="form-group mb-3">
-                    <label class="control-label">Movies to be associated</label>
-                    <div class="row row-cols-1 row-cols-md-6 bg-secondary mt-2">
-                        <div class="col " th:each="t:${moviesTitles}">
-                             <input type="checkbox" name="movieTitleArray" th:value="${t}"/>
-                            <label th:text="${t}"></label>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <table class="mt-2 table table-striped table-bordered table-dark ">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ADDRESS</th>
+                        <th>NAME</th>
+                        <th>ASSOCIATED CITY</th>
+                        <th>DELETE</th>
+                        <th>UPDATE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td th:text="${c.id}">
+                            </td>
+                        <td th:text="${c.address.address1}+', '+${c.address.address2}+', '+${c.address.codeZip}+', '+${c.address.town}"></td>
+                        <td th:text="${c.name}">
+                            </td>
+                        <td th:text="${c.city.name}"></td>
+                        <td>
+                            <a th:href="@{ cinemas(page=${currentPage}, size=${size}, id=${c.id}) }"
+                                onclick="return confirm('Are you sure?')"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                        <td>
+                            <a th:href="@{ /updateCinemaForm(id=${c.id}) }"><i class="fas fa-edit"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card-footer text-muted">
+                <button class="btn btn-secondary btn-lg" routerLink="/saveCinema">Add new cinema</button>
+            </div>
 
-                <button type="submit" class="btn btn-primary">Save</button>
-            </form>
+            <div class="col-3">
+                <a class="w-100 btn btn-dark text-white btn-block "routerLink="/saveCinema">Cinemas</a>
+            </div>
+
 
         </div>
+
     </div>
-</div>
 </div>
    

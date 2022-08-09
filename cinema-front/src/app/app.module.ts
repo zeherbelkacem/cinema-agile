@@ -10,9 +10,8 @@ import { HomeComponent } from './UComponents/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './UComponents/login/login.component';
-import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
-import { CityComponent } from './admin/components/city/city.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
+
 
 
 
@@ -24,9 +23,7 @@ import { CinemaComponent } from './admin/components/cinema/cinema.component';
     UcityComponent,
     UmoviesComponent,
     HomeComponent,
-    LoginComponent,
-    AdminHomeComponent,
-    CityComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
