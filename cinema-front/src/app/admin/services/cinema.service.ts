@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Cinema } from 'src/app/model/cinema';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,4 +9,27 @@ import { Injectable } from '@angular/core';
 export class CinemaService {
 
   constructor(private http:HttpClient) { }
+
+  public getCinemas(){
+    return this.http.get<Cinema[]>(environment.host+ '/cinema/all');
+  }
+
+  public getOnCinema(id: number){
+    return this.http.get<Cinema>(environment.host+ "/cinema/get/"+ id);
+  }
+
+  public addCinema(cinemaData : FormData){
+    return this.http.post<Cinema>(
+      environment.host+ 'cinema/save',
+      cinemaData
+    )
+  }
+
+  public deleteCinema(id: number){
+    return this.http.delete<Cinema>(environment.host+ 'cinema/delete/' + id);
+  }
+
+  public updateCinema(id: number, cinemaData: FormData){
+    return this.http.put<Cinema>(environment.host+'/cinema/update/'+id, cinemaData);
+  }
 }

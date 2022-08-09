@@ -5,21 +5,21 @@
             <div class="row g-2 justify-content-center p-2">
 
                 <div class="col-3">
-                    <a th:href="@{/admin}" class="w-100 btn btn-dark text-white btn-block ">Cities</a>
+                    <a href="#" class="w-100 btn btn-dark text-white btn-block ">Cities</a>
                 </div>
                 <div class="col-3">
-                    <a th:href="@{ /cinemas }" class="w-100 btn btn-dark text-white btn-block ">Cinemas</a>
+                    <a href="#" class="w-100 btn btn-dark text-white btn-block "routerLink="/adminCinema">Cinemas</a>
                 </div>
                 <div class="col-3">
-                    <a th:href="@{ /movies }" class="w-100 btn btn-dark text-white btn-block">Movies</a>
-                </div>
-                <div class="col-3">
-
-                    <a th:href="@{ /sessions }" class="w-100 btn btn-dark text-white btn-block ">Sessions</a>
+                    <a href="#" class="w-100 btn btn-dark text-white btn-block"routerLink="/adminMovies">Movies</a>
                 </div>
                 <div class="col-3">
 
-                    <a th:href="@{ /classification }" class="w-100 btn btn-dark text-white btn-block ">Film Classification</a>
+                    <a th:href="#" class="w-100 btn btn-dark text-white btn-block "routerLink="/adminSessions">Sessions</a>
+                </div>
+                <div class="col-3">
+
+                    <a th:href="#" class="w-100 btn btn-dark text-white btn-block "routerLink="/adminFC">Film Classification</a>
                 </div>
 
             </div>
