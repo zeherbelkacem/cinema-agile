@@ -13,6 +13,7 @@ import { LoginComponent } from './UComponents/login/login.component';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
 import { CityComponent } from './admin/components/city/city.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
+import { MovieComponent } from './admin/components/movie/movie.component';
 
 
 
@@ -26,7 +27,8 @@ import { CinemaComponent } from './admin/components/cinema/cinema.component';
     HomeComponent,
     LoginComponent,
     AdminHomeComponent,
-    CityComponent
+    CityComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
