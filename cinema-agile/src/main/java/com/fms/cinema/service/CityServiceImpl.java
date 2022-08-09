@@ -20,4 +20,9 @@ public class CityServiceImpl implements CityService {
     public City getOneById(long id) {
         return cityRepository.findById(id).get();
     }
+
+    @Override
+    public void delete(long id) {
+        cityRepository.deleteById(id);
+    }
 }

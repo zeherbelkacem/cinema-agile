@@ -26,16 +26,25 @@ public class CityController {
 
     /**
      * Update a city by id
+     *
      * @param id
      * @param city
      */
     @PutMapping("/update/{id}")
-    public void update(@PathVariable("id") int id, @RequestBody City city) {
+    public void update(@PathVariable("id") long id, @RequestBody City city) {
         City cityToUpdate = cityService.getOneById(id);
         cityToUpdate.setName(city.getName());
         cityToUpdate.setDepartment(city.getDepartment());
         cityService.add(cityToUpdate);
     }
 
-   
+    /**
+     * Delete city by id
+     * @param id
+     */
+    @DeleteMapping("/delete/{id}")
+    public void delete(@PathVariable("id") long id) {
+        cityService.delete(id);
+    }
+
 }
