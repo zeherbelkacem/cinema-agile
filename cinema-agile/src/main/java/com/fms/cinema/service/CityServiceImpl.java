@@ -3,7 +3,9 @@ package com.fms.cinema.service;
 import com.fms.cinema.entities.City;
 import com.fms.cinema.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class CityServiceImpl implements CityService {
@@ -18,7 +20,7 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public City getOneById(long id) {
-        return cityRepository.findById(id).get();
+        return cityRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Resource not found"));
     }
 
     @Override

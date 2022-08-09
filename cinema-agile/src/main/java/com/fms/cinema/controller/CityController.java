@@ -23,7 +23,6 @@ public class CityController {
         cityService.add(city);
     }
 
-
     /**
      * Update a city by id
      *
@@ -46,5 +45,12 @@ public class CityController {
     public void delete(@PathVariable("id") long id) {
         cityService.delete(id);
     }
+
+    @GetMapping("/{id}")
+    public City getOne(@PathVariable("id") long id){
+        return cityService.getOneById(id);
+    }
+
+    //lister  des villes
 
 }
