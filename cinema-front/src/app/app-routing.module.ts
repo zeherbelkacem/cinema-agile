@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
 import { CityComponent } from './admin/components/city/city.component';
+import { MovieComponent } from './admin/components/movie/movie.component';
 import { HomeComponent } from './UComponents/home/home.component';
 import { LoginComponent } from './UComponents/login/login.component';
 import { UCinemaComponent } from './UComponents/ucinema/ucinema.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
 {path : 'adminCinema',component:CinemaComponent},
 {path : 'adminCities',component:CityComponent},
 {path :'adminHome',component:AdminHomeComponent},
+{path : 'adminMovies',component: MovieComponent},
 
     { path: '**', redirectTo: '/404'}
 ];

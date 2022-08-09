@@ -12,14 +12,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './UComponents/login/login.component';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
 import { CityComponent } from './admin/components/city/city.component';
-
+import { CinemaComponent } from './admin/components/cinema/cinema.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-  
+    CinemaComponent,
     UCinemaComponent,
     UcityComponent,
     UmoviesComponent,
