@@ -38,12 +38,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="c:${cities}">
-                                <td th:text="${c.id}"></td>
-                                <td th:text="${c.name}"></td>
-                                <td th:text="${c.department}">
-                                    </td>
-                                <td th:text="${c.cinemas.size}"></td>
+                            <tr *ngFor="let city of listCities">
+                                <td >{{city.id}}</td>
+                                <td >{{city.name}}</td>
+                                <td >{{city.department}}</td>
+                                <td >{{city.cinema}}</td>
+                                
                                 <td>
                                     <a th:href="@{ admin(page=${currentPage}, size=${size}, id=${c.id}) }"
                                         onclick="return confirm('Are you sure?')"><i

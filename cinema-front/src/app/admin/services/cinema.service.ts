@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Cinema } from 'src/app/model/cinema';
+import { Cinema } from 'src/app/model/cinema.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
