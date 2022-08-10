@@ -1,5 +1,6 @@
 package com.fms.cinema;
 
+import com.fms.cinema.entities.Address;
 import com.fms.cinema.entities.Cinema;
 import com.fms.cinema.entities.City;
 import com.fms.cinema.service.CinemaServiceImpl;
@@ -28,8 +29,10 @@ public class CinemaApplication implements CommandLineRunner {
 		City paris = cityService.add(new City(null, "Paris", 75));
 		cityService.add(new City(null, "Lyon", 69));
 
-//		cinemaService.addCinema(new Cinema(null, "Distopia Jean Jaurès", null, toulouse, null));
-//		cinemaService.addCinema(new Cinema(null, "Distopia Bastide", null, paris, null));
+		
+
+		cinemaService.addCinema(new Cinema(null, "Distopia Jean Jaurès", new Address(), toulouse, null));
+		cinemaService.addCinema(new Cinema(null, "Distopia Bastide", null, paris, null));
 
 	}
 }
