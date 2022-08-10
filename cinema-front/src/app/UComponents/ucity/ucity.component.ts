@@ -14,6 +14,7 @@ error = null;
   constructor(private cityService : CityService) {}
 
   ngOnInit(): void {
+    this.getAllCity();
   }
 getAllCity(){
   this.cityService.getCity().subscribe({
