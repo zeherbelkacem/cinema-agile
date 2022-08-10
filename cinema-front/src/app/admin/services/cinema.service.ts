@@ -18,15 +18,16 @@ export class CinemaService {
     return this.http.get<Cinema>(environment.host+ "/cinema/get/"+ id);
   }
 
-  public addCinema(cinemaData : FormData){
+  public addCinema(cinema:Cinema){
+    console.log("cinema service");
     return this.http.post<Cinema>(
-      environment.host+ 'cinema/save',
-      cinemaData
+      environment.host+ '/cinema/save',
+      cinema
     )
   }
 
   public deleteCinema(id: number){
-    return this.http.delete<Cinema>(environment.host+ 'cinema/delete/' + id);
+    return this.http.delete<Cinema>(environment.host+ '/cinema/delete/' + id);
   }
 
   public updateCinema(id: number, cinemaData: FormData){

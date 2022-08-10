@@ -2,7 +2,9 @@ import { Cinema } from "./cinema.model";
 
 export class City {
     id : number;
+
     name : string;
+
     department : number;
     // cinema : Array<Cinema>;
 
