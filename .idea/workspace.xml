@@ -5,26 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83f7e2aa-c20b-4f07-bdc9-864fab3643fe" name="Changes" comment="">
-<<<<<<< HEAD
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.html" afterDir="false" />
-=======
-=======
       <change beforePath="$PROJECT_DIR$/cinema-agile/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-agile/pom.xml" afterDir="false" />
->>>>>>> 913688b12e51491d33e3e287f704189c339c77d8
       <change beforePath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/CinemaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/CinemaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/cinema/cinema.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/cinema/cinema.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/cinema/cinema.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/cinema/cinema.component.ts" afterDir="false" />
-<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/city/city.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/city/city.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-cinema/save-cinema.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-cinema/save-cinema.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-cinema/save-cinema.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-cinema/save-cinema.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/services/cinema.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/services/cinema.service.ts" afterDir="false" />
->>>>>>> fdfd2946ba5a33f0ff982745ef87aa731866e437
-=======
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/city/city.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/city/city.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-city/save-city.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-city/save-city.component.ts" afterDir="false" />
->>>>>>> 913688b12e51491d33e3e287f704189c339c77d8
+      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/services/cinema.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/services/cinema.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +55,11 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="CinemaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
