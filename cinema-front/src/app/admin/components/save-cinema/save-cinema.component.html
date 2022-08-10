@@ -1,0 +1,69 @@
+
+		<div class="card text-center">
+			<div class="card-header">
+				<h5 class="card-title">Add new cinema</h5>
+			</div>
+			<div class="card-body">
+
+				<form [formGroup]="myForm" (ngSubmit)="onSaveCinema(myForm)">
+					<div class="form-group mb-3">
+						<label class="control-label">Cinema name</label>
+						<input type="text" class="form-control" name="name">
+					
+					</div>
+					<div class="form-group mb-3">
+						<label class="control-label">Address 1</label>
+						<input type="text" class="form-control" name="address1">
+						
+					</div>
+					<div class="form-group mb-3">
+						<label class="control-label">Address 2</label>
+						<input type="text" class="form-control" name="address2" >
+				
+					</div>
+					<div class="form-group mb-3">
+						<label class="control-label">Zip code</label>
+						<input type="text" class="form-control" name="codeZip" value="France"
+							>
+				
+					</div>
+					<div class="form-group mb-3">
+						<label class="control-label">Address city</label>
+						<input type="text" class="form-control" name="town">
+			
+					</div>
+					<div class="form-group mb-3">
+						<label class="control-label">Country</label>
+						<input type="text" class="form-control" name="country" >
+						
+					</div>
+
+					<div class="form-group mb-3">
+						<label class="control-label">City to be associated</label>
+						<select name="cityName" class="form-control  mb-3">
+							<div>
+								<option></option>
+
+							</div>
+							<div >
+								<!-- for save cinema in controller -->
+								<option ></option>
+							</div>
+
+						</select>
+					</div>
+					<div class="form-group mb-3">
+						<label class="control-label">Movies to be associated</label>
+						<div class="row row-cols-1 row-cols-md-6 bg-secondary mt-2">
+							<div class="col ">
+								 <input type="checkbox" name="movieTitleArray"/>
+								<label></label>
+							</div>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-primary">Save</button>
+				</form>
+
+			</div>
+		</div>

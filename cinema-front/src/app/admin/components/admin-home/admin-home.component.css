@@ -1,0 +1,6 @@
+.btnAddCity{
+    display :flex ;
+}
+#btnAdd{
+    justify-content: center;
+}
