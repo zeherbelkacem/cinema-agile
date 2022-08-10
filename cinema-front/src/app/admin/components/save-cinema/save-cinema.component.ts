@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Cinema } from 'src/app/model/cinema';
+import { Cinema } from 'src/app/model/cinema.model';
 
 @Component({
   selector: 'app-save-cinema',
