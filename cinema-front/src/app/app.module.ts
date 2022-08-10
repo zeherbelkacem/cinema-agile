@@ -17,6 +17,7 @@ import { MovieComponent } from './admin/components/movie/movie.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,8 @@ import { MovieComponent } from './admin/components/movie/movie.component';
     AdminHomeComponent,
     CityComponent,
     MovieComponent
+
+
   ],
   imports: [
     BrowserModule,

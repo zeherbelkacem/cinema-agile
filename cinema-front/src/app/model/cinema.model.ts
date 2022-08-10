@@ -1,5 +1,5 @@
 import { Address } from "./address";
-import { City } from "./city";
+import { City } from "./city.model";
 import { Movie } from "./movie";
 
 
