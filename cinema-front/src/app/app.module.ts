@@ -14,6 +14,7 @@ import { AdminHomeComponent } from './admin/components/admin-home/admin-home.com
 import { CityComponent } from './admin/components/city/city.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
 import { MovieComponent } from './admin/components/movie/movie.component';
+import { SaveCityComponent } from './admin/components/save-city/save-city.component';
 import { SaveCinemaComponent } from './admin/components/save-cinema/save-cinema.component';
 
 
@@ -29,6 +30,7 @@ import { SaveCinemaComponent } from './admin/components/save-cinema/save-cinema.
     AdminHomeComponent,
     CityComponent,
     MovieComponent,
+    SaveCityComponent,
     SaveCinemaComponent
   ],
   imports: [
