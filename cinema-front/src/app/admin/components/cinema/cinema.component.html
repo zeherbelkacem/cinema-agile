@@ -15,11 +15,11 @@
                 </div>
                 <div class="col-3">
 
-                    <a th:href="#" class="w-100 btn btn-dark text-white btn-block "routerLink="/adminSessions">Sessions</a>
+                    <a  class="w-100 btn btn-dark text-white btn-block "routerLink="/adminSessions">Sessions</a>
                 </div>
                 <div class="col-3">
 
-                    <a th:href="#" class="w-100 btn btn-dark text-white btn-block "routerLink="/adminFC">Film Classification</a>
+                    <a  class="w-100 btn btn-dark text-white btn-block "routerLink="/adminFC">Film Classification</a>
                 </div>
 
             </div>
@@ -52,19 +52,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="c:${cinemas}">
-                                <td th:text="${c.id}">
+                            <tr *ngFor="let cinema of listCinema">
+                                <td >{{cinema.id}}
                                     </td>
-                                <td th:text="${c.address.address1}+', '+${c.address.address2}+', '+${c.address.codeZip}+', '+${c.address.town}"></td>
-                                <td th:text="${c.name}">
+                                <td >{{cinema.address}}</td>
+                                <td >{{cinema.name}}
                                     </td>
-                                <td th:text="${c.city.name}"></td>
-                                <td>
-                                    <a th:href="@{ cinemas(page=${currentPage}, size=${size}, id=${c.id}) }"
-                                        onclick="return confirm('Are you sure?')"><i class="fas fa-trash-alt"></i></a>
+                                <td >{{cinema.city.name}}</td>
+                                <td>{{cinema.movies}}
                                 </td>
                                 <td>
-                                    <a th:href="@{ /updateCinemaForm(id=${c.id}) }"><i class="fas fa-edit"></i></a>
+                                    <a ><i class="fas fa-edit"></i></a>
+                                    
                                 </td>
                             </tr>
                         </tbody>

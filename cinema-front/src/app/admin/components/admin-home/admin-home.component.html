@@ -3,26 +3,22 @@
         <div class="card-header">
             <div class="row g-2 justify-content-center p-2">
                 <div class="col-3">
-                    <a href="#" class="w-100 btn btn-dark text-white btn-block ">Cities</a>
+                    <a href="#" class="w-100 btn btn-dark text-white btn-block " routerLink="/adminCities">Cities</a>
                 </div>
                 <div class="col-3">
-                    <a class="w-100 btn btn-dark text-white btn-block " routerLink="/adminCinema">Cinemas</a>
+                    <a href="#" class="w-100 btn btn-dark text-white btn-block "routerLink="/adminCinema">Cinemas</a>
                 </div>
                 <div class="col-3">
-                    <a class="w-100 btn btn-dark text-white btn-block" routerLink="/adminMovies">Movies</a>
+                    <a href="#" class="w-100 btn btn-dark text-white btn-block"routerLink="/adminMovies">Movies</a>
                 </div>
                 <div class="col-3">
-
                     <a th:href="#" class="w-100 btn btn-dark text-white btn-block "routerLink="/adminSessions">Sessions</a>
                 </div>
                 <div class="col-3">
-
                     <a th:href="#" class="w-100 btn btn-dark text-white btn-block "routerLink="/adminFC">Film Classification</a>
                 </div>
-
             </div>
         </div>
-
         <section layout:fragment="admin">
             <div class="card-body">
                 <!-- <h5 class="card-title">List of articles</h5> -->
@@ -42,12 +38,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="c:${cities}">
-                                <td th:text="${c.id}"></td>
-                                <td th:text="${c.name}"></td>
-                                <td th:text="${c.department}">
-                                    </td>
-                                <td th:text="${c.cinemas.size}"></td>
+                            <tr *ngFor="let city of listCities">
+                                <td >{{city.id}}</td>
+                                <td >{{city.name}}</td>
+                                <td >{{city.department}}</td>
+                                <!-- <td >{{city.cinema}}</td> -->
+                                
                                 <td>
                                     <a th:href="@{ admin(page=${currentPage}, size=${size}, id=${c.id}) }"
                                         onclick="return confirm('Are you sure?')"><i
@@ -82,7 +78,7 @@
                     </nav>
                 </div>
                 <div class="card-footer text-muted">
-                    <a th:href="@{admin/saveCityForm}" class="btn btn-secondary btn-lg">Add new city</a>
+                    <a href="#" class="btn btn-secondary btn-lg"routerLink="/saveCity">Add new city</a>
                 </div>
             </div>
         </section>
