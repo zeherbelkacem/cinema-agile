@@ -1,4 +1,4 @@
-import { Cinema } from "./cinema";
+import { Cinema } from "./cinema.model";
 
 export interface City {
     id : number;
