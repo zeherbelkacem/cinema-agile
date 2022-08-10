@@ -16,6 +16,7 @@ import { CinemaComponent } from './admin/components/cinema/cinema.component';
 import { MovieComponent } from './admin/components/movie/movie.component';
 import { SaveCityComponent } from './admin/components/save-city/save-city.component';
 import { SaveCinemaComponent } from './admin/components/save-cinema/save-cinema.component';
+import { UpdateCinemaComponent } from './admin/components/update-cinema/update-cinema.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { SaveCinemaComponent } from './admin/components/save-cinema/save-cinema.
     CityComponent,
     MovieComponent,
     SaveCityComponent,
-    SaveCinemaComponent
+    SaveCinemaComponent,
+    UpdateCinemaComponent
   ],
   imports: [
     BrowserModule,
