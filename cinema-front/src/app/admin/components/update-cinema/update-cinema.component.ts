@@ -27,6 +27,7 @@ export class UpdateCinemaComponent implements OnInit {
     private route : ActivatedRoute
   ) {
   this.myForm = this.formBuilder.group({
+    id : [0],
   name: ['', [Validators.required]],
   address1: [''],
   address2: [''],
@@ -41,7 +42,22 @@ export class UpdateCinemaComponent implements OnInit {
   ngOnInit(): void {
     let id = this.route.snapshot.params['id'];
     console.log(id);
-   // this.cinema = this.cinemaService.getOneCinema(id);
+    this.cinemaService.getOneCinema(id).subscribe({
+      next: (data) => {
+        this.cinema=data
+        this.myForm.setValue({
+          id : this.cinema.id,
+          name : this.cinema.name,
+          address1 : this.cinema.address.address1,
+          address2 : this.cinema.address.address2,
+          codeZip : this.cinema.address.codeZip,
+          town : this.cinema.address.town,
+          country : this.cinema.address.country,
+          city : this.cinema.city,
+          movies : this.cinema.movies
+        })
+      }
+    });
     this.cityService.getCity().subscribe({
       next: (data)=>this.listCities=data
     });
@@ -65,11 +81,11 @@ export class UpdateCinemaComponent implements OnInit {
         [],
       );
       console.log(this.cinema);
-      this.cinemaService.addCinema(this.cinema).subscribe({
-        next: (data)=>console.log("ok"),
-        error: (err) => console.log(err),
-        complete: () => this.router.navigateByUrl("/adminHome")
-      });
+      // this.cinemaService.addCinema(this.cinema).subscribe({
+      //   next: (data)=>console.log("ok"),
+      //   error: (err) => console.log(err),
+      //   complete: () => this.router.navigateByUrl("/adminHome")
+      // });
     }
   }
 
