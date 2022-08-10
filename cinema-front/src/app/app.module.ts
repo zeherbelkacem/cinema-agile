@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './UComponents/login/login.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { LoginComponent } from './UComponents/login/login.component';
     UmoviesComponent,
     HomeComponent,
     LoginComponent,
+   
   ],
   imports: [
     BrowserModule,
