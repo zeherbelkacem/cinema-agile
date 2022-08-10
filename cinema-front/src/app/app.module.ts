@@ -14,6 +14,7 @@ import { AdminHomeComponent } from './admin/components/admin-home/admin-home.com
 import { CityComponent } from './admin/components/city/city.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
 import { MovieComponent } from './admin/components/movie/movie.component';
+import { SaveCityComponent } from './admin/components/save-city/save-city.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MovieComponent } from './admin/components/movie/movie.component';
     LoginComponent,
     AdminHomeComponent,
     CityComponent,
-    MovieComponent
+    MovieComponent,
+    SaveCityComponent
   ],
   imports: [
     BrowserModule,
