@@ -22,7 +22,8 @@ public class CinemaController {
 
     @PostMapping("/save")
     public Cinema saveCinema(@RequestBody Cinema cinema){
-        return cinemaService.addCinema(cinema);
+        System.out.println(cinema);
+    return cinemaService.addCinema(cinema);
     }
 
     @PutMapping("/update/{id}")

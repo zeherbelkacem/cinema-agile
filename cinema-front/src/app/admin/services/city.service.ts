@@ -12,4 +12,7 @@ export class CityService {
   public getCity(){
     return this.http.get<City[]>(environment.host+"/city/all");
 }
+  public getCityById(id : number){
+    return this.http.get<City>(environment.host+"/city/"+ id);
+  }
 }
