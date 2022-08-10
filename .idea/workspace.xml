@@ -7,14 +7,6 @@
     <list default="true" id="83f7e2aa-c20b-4f07-bdc9-864fab3643fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/admin-home/admin-home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/admin-home/admin-home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/city/city.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/city/city.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-city/save-city.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-city/save-city.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-city/save-city.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/save-city/save-city.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/services/city.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/services/city.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/model/address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/model/address.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/model/cinema.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/model/cinema.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/model/city.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/model/city.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
