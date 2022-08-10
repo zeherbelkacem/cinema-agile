@@ -20,7 +20,7 @@ public class CityController {
      *
      * @param city
      */
-    @PostMapping("/new")
+    @PostMapping("/save")
     public void add(@RequestBody City city) {
         cityService.add(city);
     }
@@ -55,7 +55,7 @@ public class CityController {
      * @param id
      * @return
      */
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public City getOne(@PathVariable("id") long id) {
         return cityService.getOneById(id);
     }
@@ -68,5 +68,4 @@ public class CityController {
     public List<City> getAll() {
         return cityService.getAll();
     }
-
 }
