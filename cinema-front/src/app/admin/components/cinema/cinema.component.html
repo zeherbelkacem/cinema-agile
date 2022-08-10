@@ -44,8 +44,8 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>ADDRESS</th>
                                 <th>NAME</th>
+                                <th>ADDRESS</th>
                                 <th>ASSOCIATED CITY</th>
                                 <th>DELETE</th>
                                 <th>UPDATE</th>
@@ -55,9 +55,10 @@
                             <tr *ngFor="let cinema of listCinema">
                                 <td >{{cinema.id}}
                                     </td>
-                                <td >{{cinema.address}}</td>
-                                <td >{{cinema.name}}
+                                    <td >{{cinema.name}}
                                     </td>
+                                <td >{{cinema.address.address1+' '+ cinema.address.address2+' '+cinema.address.codeZip}}</td>
+                                
                                 <td >{{cinema.city.name}}</td>
                                 <td>{{cinema.movies}}
                                 </td>
