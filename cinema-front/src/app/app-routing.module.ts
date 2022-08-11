@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
 import { CityComponent } from './admin/components/city/city.component';
+import { DeleteCinemaComponent } from './admin/components/delete-cinema/delete-cinema.component';
 import { MovieComponent } from './admin/components/movie/movie.component';
 import { SaveCinemaComponent } from './admin/components/save-cinema/save-cinema.component';
 import { SaveCityComponent } from './admin/components/save-city/save-city.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
 {path : 'adminMovies',component: MovieComponent},
 {path : 'saveCity',component:SaveCityComponent},
 {path : 'updateCinema/:id',component:UpdateCinemaComponent},
+{path : 'deleteCinema/:id',component:DeleteCinemaComponent},
 
     { path: '**', redirectTo: '/404'}
 ];

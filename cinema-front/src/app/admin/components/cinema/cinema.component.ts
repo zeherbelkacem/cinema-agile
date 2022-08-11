@@ -31,4 +31,8 @@ error = null;
   onUpdateCinema(id : number){
     this.router.navigateByUrl('/updateCinema/'+id);
   }
+
+  onDeleteCinema(id : number){
+    this.router.navigateByUrl('/deleteCinema/'+ id);
+  }
 }
