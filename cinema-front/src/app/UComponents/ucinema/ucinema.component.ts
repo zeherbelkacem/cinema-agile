@@ -10,7 +10,7 @@ import { Cinema } from 'src/app/model/cinema.model';
 })
 export class UCinemaComponent implements OnInit {
   listCinema: Cinema[] | undefined;
-  keyWord : string = '';
+ // keyWord : string = '';
   error = null;
 
   constructor(
@@ -19,18 +19,14 @@ export class UCinemaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.keyWord = this.route.snapshot.params['keyWord'];
-    console.log(this.keyWord);
-    this.getAllCinema();
+   // this.keyWord = this.route.snapshot.params['keyWord'];
+    //this.route.queryParams.subscribe(queryParams => { this.getCinemaByKeyWord(queryParams['keyWord']) });
+
+    this.route.params.subscribe(routeParams => {this.getCinemaByKeyWord(routeParams['keyWord'])});
   }
 
-  ngOnChange(): void{
-    this.keyWord = this.route.snapshot.params['keyWord'];
-    this.getAllCinema();
-  }
-
-  getAllCinema() {
-    this.cinemaService.getCinemasByKeyWord(this.keyWord).subscribe({
+  getCinemaByKeyWord(keyWord : string) {
+    this.cinemaService.getCinemasByKeyWord(keyWord).subscribe({
       next:(data)=>(this.listCinema=data),
       error:(err)=>this.error=err.message,
       complete:()=>this.error=null, 
