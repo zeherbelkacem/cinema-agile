@@ -41,7 +41,7 @@
 									<!-- <th>ID</th> -->
 									<th>City</th>
 									<th>Department</th>
-									<th>Nbr of cinemas</th>
+									<th>Name of cinemas</th>
 									<th>Selection</th>
 									<!-- <th>See available cinemas</th> -->
 								</tr>
@@ -51,7 +51,9 @@
 									<!-- <td >{{city.id}}</td> -->
 									<td >{{city.name}}</td>
 									<td >{{city.department}}</td>
-									<td></td>
+									<td><ul *ngFor="let cinema of listCinemas" >
+										<li *ngIf="city.id==cinema.city.id">{{cinema.name}}</li>
+									</ul></td>
 									<!-- <td >{{city.cinema}}</td> -->
 									
 									<td>
