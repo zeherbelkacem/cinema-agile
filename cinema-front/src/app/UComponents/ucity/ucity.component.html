@@ -17,74 +17,56 @@
     </div>
   </nav>
 </div>
-<div class="mt-4" layout:fragment="section">
-
+<div class="container">
 	<div class="card-body">
-					<!-- <h5 class="card-title">List of articles</h5> -->
+				
 					<div class="row g-3">
 						<div class="col-6 ">
 							<h3 th:text="${listOf}"></h3>
-
 						</div>
-						<!--							<div class="col-6">
-								<form th:action="@{/admin}" method="GET" class="form-inline input-group">
-									<input class="form-control mr-sm-2" name="keyWord" type="search"
-										placeholder="Search" aria-label="Search">
-									<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-								</form>
-
-							</div>-->
-
-						<table class="mt-2 table table-striped table-bordered table-light ">
-							<thead>
+						<table class="mt-2 table table-striped table-bordered table-dark ">
+							<thead >
 								<tr>
-									<th>ID</th>
 									<th>City</th>
 									<th>Department</th>
-									<th>Nbr of cinemas</th>
-									<th>See available cinemas</th>
+									<th>Name of cinemas</th>
+									<th>Selection</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr *ngFor="let city of listCities">
-									<td >{{city.id}}</td>
 									<td >{{city.name}}</td>
-									<td >{{city.department}}
-										</td>
-									<td >{{city.cinema}}</td>
-									
+									<td >{{city.department}}</td>
+									<td><ul *ngFor="let cinema of listCinemas" >
+										<li *ngIf="city.id==cinema.city.id">{{cinema.name}}</li>
+									</ul></td>
 									<td>
-										<a class="btn btn-success" th:href="@{/myCity(id=${c.id}) }"> SELECT</a>
+										<a class="btn btn-success" (click)="onSelect(city.id)"> SELECT</a>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<div>
+					<!-- <div>
 						<nav aria-label="...">
 							<ul class="pagination justify-content-center">
-
-
 								<li th:class="${currentPage==0 ? 'page-item disabled' : 'page-item'} ">
 									<a class="page-link"
 										th:href="@{/myCity(page=${currentPage-1}, size=${size}, keyWord=${keyWord} ) }">Previous</a>
 								</li>
-
 								<li th:each="page,status:${pages}"><a
 										th:class="${status.index==currentPage?'btn btn-primary':'btn'  }"
 										th:href="@{ /myCity(page=${status.index}, size=${size}, keyWord=${keyWord}) }"
 										th:text="${status.index }"></a></li>
-
 								<li class="page-item"><a class="page-link"
 										th:href="@{ /myCity(page=${currentPage+1}, size=${size}, keyWord=${keyWord} )}">Next</a>
 								</li>
 								<li class="page-item"><a class="page-link"
 										th:href="@{/myCity(page=${totalPages-1}, size=${size}, keyWord=${keyWord} )}">Last</a>
-
 								</li>
 							</ul>
 						</nav>
-					</div>
+					</div> -->
 					
 
 

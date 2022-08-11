@@ -5,48 +5,55 @@
 			</div>
 			<div class="card-body">
 
+				<form [formGroup]="myForm" (ngSubmit)="onSaveCinema(myForm)">
 
-				<!-- [formGroup]="myForm" (ngSubmit)="onSaveCinema(myForm)" -->
-				<form>
+					<div *ngIf="myForm.value.id" class="form-group">
+
+						<label class="control-label">Id : </label>
+			
+						<input type="text" formControlName="id" class="form-control">
+			
+					</div>
+
 					<div class="form-group mb-3">
 						<label class="control-label">Cinema name</label>
-						<input type="text" class="form-control" name="name">
+						<input type="text" class="form-control" formControlName="name">
 					
 					</div>
 					<div class="form-group mb-3">
 						<label class="control-label">Address 1</label>
-						<input type="text" class="form-control" name="address1">
+						<input type="text" class="form-control" formControlName="address1">
 						
 					</div>
 					<div class="form-group mb-3">
 						<label class="control-label">Address 2</label>
-						<input type="text" class="form-control" name="address2" >
+						<input type="text" class="form-control" formControlName="address2" >
 				
 					</div>
 					<div class="form-group mb-3">
 						<label class="control-label">Zip code</label>
-						<input type="text" class="form-control" name="codeZip" value="France"
+						<input type="text" class="form-control" formControlName="codeZip"
 							>
 				
 					</div>
 					<div class="form-group mb-3">
 						<label class="control-label">Address city</label>
-						<input type="text" class="form-control" name="town">
+						<input type="text" class="form-control" formControlName="town">
 			
 					</div>
 					<div class="form-group mb-3">
 						<label class="control-label">Country</label>
-						<input type="text" class="form-control" name="country" >
+						<input type="text" class="form-control" formControlName="country" >
 						
 					</div>
 
 					<div class="form-group mb-3">
 						<label class="control-label">City to be associated</label>
-						<select name="cityName" class="form-control  mb-3">
-							<div>
-								<option></option>
+						<select formControlName="city" class="form-control  mb-3">
+							
+								<option *ngFor="let city of listCities" [ngValue]="city.id">{{city.name}}</option>
 
-							</div>
+							
 							<div >
 								<!-- for save cinema in controller -->
 								<option ></option>
@@ -58,7 +65,7 @@
 						<label class="control-label">Movies to be associated</label>
 						<div class="row row-cols-1 row-cols-md-6 bg-secondary mt-2">
 							<div class="col ">
-								 <input type="checkbox" name="movieTitleArray"/>
+								 <input type="checkbox" formControlName="movies"/>
 								<label></label>
 							</div>
 						</div>

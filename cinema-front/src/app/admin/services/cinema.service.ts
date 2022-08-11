@@ -14,22 +14,30 @@ export class CinemaService {
     return this.http.get<Cinema[]>(environment.host+ '/cinema/all');
   }
 
-  public getOnCinema(id: number){
+  public getOneCinema(id: number){
     return this.http.get<Cinema>(environment.host+ "/cinema/get/"+ id);
   }
 
-  public addCinema(cinemaData : FormData){
+  public addCinema(cinema:Cinema){
     return this.http.post<Cinema>(
-      environment.host+ 'cinema/save',
-      cinemaData
+      environment.host+ '/cinema/save',
+      cinema
     )
   }
 
   public deleteCinema(id: number){
-    return this.http.delete<Cinema>(environment.host+ 'cinema/delete/' + id);
+    return this.http.delete<Cinema>(environment.host+ '/cinema/delete/' + id);
   }
 
   public updateCinema(id: number, cinemaData: FormData){
     return this.http.put<Cinema>(environment.host+'/cinema/update/'+id, cinemaData);
+  }
+
+  public getCinemasByKeyWord(keyWord : string){
+    return this.http.get<Cinema[]>(environment.host+'/cinema/getByKeyWord/'+keyWord);
+  }
+
+  public getCinemasByCityId(cityId : number){
+    return this.http.get<Cinema[]>(environment.host+"/cinema/getByCityId/"+ cityId);
   }
 }

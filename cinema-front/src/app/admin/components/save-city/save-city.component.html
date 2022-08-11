@@ -1,0 +1,31 @@
+<div class="mt-5" layout:fragment="sectionAdmin">
+    <div class="card text-center">
+        <div class="card-header">
+            <h5 class="card-title">Add new city</h5>
+        </div>
+        <div class="card-body">
+
+            <form [formGroup]="myForm" (ngSubmit)="onSaveCity(myForm)">
+                <!-- <div *ngIf="myForm.value.id" class="form-group">
+                    <label class="control-label">Id : </label>
+                    <input type="text" formControlName="id" class="form-control">
+                </div>   -->
+                <div class="form-group mb-3">
+                    <label class="control-label">City name</label>
+                    <input type="text" class="form-control" formControlName="name" >
+       
+                </div>
+                <div class="form-group mb-3">
+                    <label class="control-label">Department</label>
+                    <input type="text" class="form-control" formControlName="department" >
+                  
+                </div>
+                
+
+
+                <button *ngIf="!status" type="submit" class="btn btn-primary">Save</button>
+            </form>
+
+        </div>
+    </div>
+</div>

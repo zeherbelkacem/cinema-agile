@@ -1,0 +1,41 @@
+
+		<div class="card text-center">
+			<div class="card-header">
+				<h5 class="card-title">Delete this cinema?</h5>
+			</div>
+			<div class="card-body">
+
+                    <div class="form-group mb-3" *ngIf="cinema.id">
+						<label class="control-label">Id : {{cinema.id}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="cinema.name">
+						<label class="control-label">{{cinema.name}}</label>
+					</div>
+                    
+					<div class="form-group mb-3" *ngIf="cinema.address.address1">
+						<label class="control-label">{{cinema.address.address1}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="cinema.address.address2">
+						<label class="control-label">{{cinema.address.address2}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="cinema.address.codeZip">
+						<label class="control-label">{{cinema.address.codeZip}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="cinema.address.town">
+						<label class="control-label">{{cinema.address.town}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="cinema.address.country">
+						<label class="control-label">{{cinema.address.country}}</label>
+					</div>
+
+					<button (click)="deleteCinema(cinema.id)" class="btn btn-warning" onclick="return confirm('Are you sure?')">Delete</button>
+
+                    <button routerLink="/adminCinema" class="btn btn-primary">Cancel</button>
+
+			</div>
+		</div>

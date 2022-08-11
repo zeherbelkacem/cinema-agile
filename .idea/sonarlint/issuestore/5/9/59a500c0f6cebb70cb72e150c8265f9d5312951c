@@ -1,0 +1,13 @@
+
+U
+java:S1854"9Remove this useless assignment to local variable "paris".(ÂüÈe8å’ø¿¨0
+^
+java:S1854"<Remove this useless assignment to local variable "toulouse".(ĞÈ‡Øùÿÿÿÿ8å’ø¿¨0
+O
+java:S1481"-Remove this unused "toulouse" local variable.(ĞÈ‡Øùÿÿÿÿ8ç’ø¿¨0
+F
+java:S1481"*Remove this unused "paris" local variable.(ÂüÈe8ç’ø¿¨0
+^
+java:S1128"<Remove this unused import 'com.fms.cinema.entities.Address'.(­øÆÁøÿÿÿÿ8è’ø¿¨0
+]
+java:S1128";Remove this unused import 'com.fms.cinema.entities.Cinema'.(İ´Ï¹üÿÿÿÿ8è’ø¿¨0

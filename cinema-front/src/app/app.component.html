@@ -16,8 +16,8 @@
 							<a class="nav-link"  href="#" routerLink="/adminHome">Admin</a>
 						</li>
 					</ul>
-					<form action="" class="form-inline input-group w-50">
-						<input class="form-control" name="keyWord" type="search"
+					<form [formGroup]="myForm" (ngSubmit)="onSearch(myForm)" class="form-inline input-group w-50">
+						<input class="form-control" name="keyWord" type="search" formControlName="keyWord"
 							placeholder="Get your city's cinemas or cinema name" aria-label="Search">
 						<button class="btn btn-outline-success" type="submit">Search</button>
 					</form>

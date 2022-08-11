@@ -1,6 +1,10 @@
 package com.fms.cinema;
 
+
 import com.fms.cinema.entities.Category;
+
+import com.fms.cinema.entities.Address;
+
 import com.fms.cinema.entities.Cinema;
 import com.fms.cinema.entities.City;
 import com.fms.cinema.repository.CategoryRepository;
@@ -32,9 +36,9 @@ public class CinemaApplication implements CommandLineRunner {
 		City toulouse = cityService.add(new City(null, "Toulouse", 31));
 		City paris = cityService.add(new City(null, "Paris", 75));
 		cityService.add(new City(null, "Lyon", 69));
-
-		cinemaService.addCinema(new Cinema(null, "Distopia Jean Jaurès", null, toulouse, null));
+		cinemaService.addCinema(new Cinema(null, "Distopia Jean Jaurès", new Address(), toulouse, null));
 		cinemaService.addCinema(new Cinema(null, "Distopia Bastide", null, paris, null));
+
 
 		/*********** Movies categories ***********/
 		Category asian = new Category("ASIAN", null);
@@ -49,5 +53,11 @@ public class CinemaApplication implements CommandLineRunner {
 		categoryRepository.save(drama);
 		categoryRepository.save(fiction);
 		categoryRepository.save(horror);
+
+		Address addJeanJo = new Address("Allées Jean Jaunes", "", "Toulouse", "31000", "France");
+		Address addBastile = new Address("Bld Bastile", "", "Paris", "75000", "France");
+		cinemaService.addCinema(new Cinema(null, "Distopia Jean Jaurès", addJeanJo, toulouse, null));
+		cinemaService.addCinema(new Cinema(null, "Distopia Bastide", addBastile, paris, null));
+
 	}
 }

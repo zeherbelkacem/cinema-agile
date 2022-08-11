@@ -22,7 +22,8 @@ public class CinemaController {
 
     @PostMapping("/save")
     public Cinema saveCinema(@RequestBody Cinema cinema){
-        return cinemaService.addCinema(cinema);
+        System.out.println(cinema);
+    return cinemaService.addCinema(cinema);
     }
 
     @PutMapping("/update/{id}")
@@ -42,5 +43,15 @@ public class CinemaController {
     @GetMapping("/get/{id}")
     public Cinema getCinemaById(@PathVariable("id")long id){
         return cinemaService.getCinemaById(id).orElseThrow(()-> new RecordNotFoundException("Le cinema d'id " + id + " n'existe pas"));
+    }
+
+    @GetMapping("/getByKeyWord/{keyWord}")
+    public List<Cinema> getCinemaByKeyword(@PathVariable("keyWord")String keyWord){
+        return cinemaService.getCinemaByKeyWord(keyWord);
+    }
+
+    @GetMapping("/getByCityId/{id}")
+    public List<Cinema> getCinemaByCityId(@PathVariable("id")Long id){
+        return cinemaService.getCinemaByCityId(id);
     }
 }
