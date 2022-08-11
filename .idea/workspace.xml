@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="83f7e2aa-c20b-4f07-bdc9-864fab3643fe" name="Changes" comment="" />
+<<<<<<< HEAD
 =======
     <list default="true" id="83f7e2aa-c20b-4f07-bdc9-864fab3643fe" name="Changes" comment="">
 <<<<<<< HEAD
@@ -15,6 +15,8 @@
 >>>>>>> ae4f12bd4ad5ec14c91bf270cfbf39733d8656ec
     </list>
 >>>>>>> 4c8d25809c1ad2d246bdc7b85727dc40ba747757
+=======
+>>>>>>> 6dfd872c726049412e8248d084ddb537fe6a232d
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +37,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -57,7 +59,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/cinem_belca/distopia" />
   </component>
   <component name="RunManager">
     <configuration name="CinemaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

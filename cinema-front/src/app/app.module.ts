@@ -17,6 +17,9 @@ import { MovieComponent } from './admin/components/movie/movie.component';
 import { SaveCityComponent } from './admin/components/save-city/save-city.component';
 import { SaveCinemaComponent } from './admin/components/save-cinema/save-cinema.component';
 import { UpdateCinemaComponent } from './admin/components/update-cinema/update-cinema.component';
+import { DeleteCinemaComponent } from './admin/components/delete-cinema/delete-cinema.component';
+import { UpdateCityComponent } from './admin/components/update-city/update-city.component';
+
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { UpdateCinemaComponent } from './admin/components/update-cinema/update-c
     MovieComponent,
     SaveCityComponent,
     SaveCinemaComponent,
-    UpdateCinemaComponent
+    UpdateCinemaComponent,
+    DeleteCinemaComponent,
+    UpdateCityComponent,
+  
   ],
   imports: [
     BrowserModule,
