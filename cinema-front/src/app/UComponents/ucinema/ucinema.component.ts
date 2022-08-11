@@ -42,19 +42,21 @@ export class UCinemaComponent implements OnInit {
 
 
   getAllCinema() {
-
+    if(this.keyWord){
     this.cinemaService.getCinemasByKeyWord(this.keyWord).subscribe({
-
       next:(data)=>{this.ngOnInit();
-
         this.listCinema=data},
-
       error:(err)=>this.error=err.message,
-
       complete:()=>this.error=null,
-
-    })
-
+    })}
+    else{
+      this.cinemaService.getCinemas().subscribe({
+        next:(data)=>{this.ngOnInit();
+          this.listCinema=data},
+        error:(err)=>this.error=err.message,
+        complete:()=>this.error=null,
+      })
+    }
   }
 
 }

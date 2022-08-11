@@ -16,7 +16,8 @@
           </div>
         </div>
       </nav>
-
+</div>
+<div class="container">
       <table class="mt-2 table table-striped table-bordered table-dark ">
         <thead>
             <tr>
@@ -29,17 +30,13 @@
         </thead>
         <tbody>
             <tr *ngFor="let cinema of listCinema">
-                <td >{{cinema.id}}
-                    </td>
-                    <td >{{cinema.name}}
-                    </td>
-                <td >{{cinema.address.address1+' '+ cinema.address.address2+' '+cinema.address.codeZip}}</td>
-                
-                <td >{{cinema.city.name}}</td>
+                <td>{{cinema.id}}</td>
+                <td>{{cinema.name}}</td>
+                <td>{{cinema.address.address1+' '+ cinema.address.address2+' '+cinema.address.codeZip}}</td>
+                <td>{{cinema.city.name}}</td>
                 <td>{{cinema.movies}}
                 </td>
             </tr>
         </tbody>
     </table>
-
-    </div>
+  </div>

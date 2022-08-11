@@ -14,8 +14,7 @@ export class UcityComponent implements OnInit {
 listCities : City[] | undefined;
 listCinemas : Cinema[]|undefined;
 error = null;
-  city: any;
-  cinema: any;
+ 
  
 
   constructor(private cityService : CityService,private cinemaService : CinemaService) {}
