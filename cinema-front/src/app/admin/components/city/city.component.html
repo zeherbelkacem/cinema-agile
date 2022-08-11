@@ -45,8 +45,7 @@
                                 <!-- <td >{{city.cinema}}</td> -->
                                 
                                 <td>
-                                    <a th:href="@{ admin(page=${currentPage}, size=${size}, id=${c.id}) }"
-                                        onclick="return confirm('Are you sure?')"><i
+                                    <a (click)="onDeleteCity(city)"><i
                                             class="fas fa-trash-alt"></i></a>
                                 </td>
                                 <td>
