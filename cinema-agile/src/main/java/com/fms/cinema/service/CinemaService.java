@@ -16,4 +16,6 @@ public interface CinemaService {
 
     public void deleteCinemaById(long id);
 
+    public List<Cinema> getCinemaByKeyWord(String keyWord);
+
 }

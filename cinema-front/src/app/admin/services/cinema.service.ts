@@ -32,4 +32,8 @@ export class CinemaService {
   public updateCinema(id: number, cinemaData: FormData){
     return this.http.put<Cinema>(environment.host+'/cinema/update/'+id, cinemaData);
   }
+
+  public getCinemasByKeyWord(keyWord : string){
+    return this.http.get<Cinema[]>(environment.host+'/cinema/getByKeyWord/'+keyWord);
+  }
 }
