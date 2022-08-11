@@ -35,4 +35,7 @@ export class CityComponent implements OnInit {
       })
     }
   }
+  onUpdateCity(id : number){
+    this.router.navigateByUrl('/updateCity/'+id);
+  }
 }
