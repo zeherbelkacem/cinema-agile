@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="83f7e2aa-c20b-4f07-bdc9-864fab3643fe" name="Changes" comment="" />
+<<<<<<< HEAD
+=======
     <list default="true" id="83f7e2aa-c20b-4f07-bdc9-864fab3643fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/controller/CinemaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/controller/CinemaController.java" afterDir="false" />
@@ -16,6 +19,9 @@
       <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/services/cinema.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/services/cinema.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-front/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/app-routing.module.ts" afterDir="false" />
     </list>
+>>>>>>> 4c8d25809c1ad2d246bdc7b85727dc40ba747757
+=======
+>>>>>>> 6dfd872c726049412e8248d084ddb537fe6a232d
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +42,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
