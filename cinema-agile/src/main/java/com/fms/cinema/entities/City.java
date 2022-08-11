@@ -11,13 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
-@Data @AllArgsConstructor @NoArgsConstructor @ToString
+@Data @AllArgsConstructor @NoArgsConstructor @ToString @Builder
 public class City implements Serializable {
 
     private static final long serialVersionUID = 1L;

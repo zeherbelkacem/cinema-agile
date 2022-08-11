@@ -3,6 +3,7 @@ package com.fms.cinema.controller;
 import com.fms.cinema.entities.City;
 import com.fms.cinema.service.CityServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,8 +22,9 @@ public class CityController {
      * @param city
      */
     @PostMapping("/save")
-    public void add(@RequestBody City city) {
-        cityService.add(city);
+    @ResponseStatus(HttpStatus.CREATED)
+    public City add(@RequestBody City city) {
+      return  cityService.add(city);
     }
 
     /**
