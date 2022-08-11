@@ -14,7 +14,7 @@ export class CinemaService {
     return this.http.get<Cinema[]>(environment.host+ '/cinema/all');
   }
 
-  public getOnCinema(id: number){
+  public getOneCinema(id: number){
     return this.http.get<Cinema>(environment.host+ "/cinema/get/"+ id);
   }
 
