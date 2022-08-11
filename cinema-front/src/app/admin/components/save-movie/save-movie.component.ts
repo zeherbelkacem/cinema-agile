@@ -1,6 +1,7 @@
 import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { Category } from 'src/app/model/category';
 import { FileHandle } from 'src/app/model/imageFileHandle';
 import { Movie } from 'src/app/model/movie';
@@ -35,7 +36,8 @@ export class SaveMovieComponent implements OnInit {
   constructor(
     private categoryService: CategoryService,
     private fb: FormBuilder,
-    private movieService: MovieService
+    private movieService: MovieService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -64,6 +66,9 @@ export class SaveMovieComponent implements OnInit {
     this.movieService.saveMovie(formData).subscribe((data) => {
       console.log(data);
     });
+    this.router.navigateByUrl("/adminMovies").then(() => {
+      window.location.reload();
+    });
   }
 
   /**
@@ -85,7 +90,8 @@ export class SaveMovieComponent implements OnInit {
    * 
    */
   getAllCategories() {
-    this.categoryService.getAllCategories().subscribe({
+     this.categoryService.getAllCategories().subscribe(
+      {
       next: (data) => ((this.listCategories = data), console.log(data)),
       error: (err) => (this.error = err.message),
       complete: () => (this.error = null),

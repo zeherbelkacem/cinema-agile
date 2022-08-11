@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Cinema } from 'src/app/model/cinema.model';
 import { environment } from 'src/environments/environment';
 
@@ -10,7 +11,7 @@ export class CinemaService {
 
   constructor(private http:HttpClient) { }
 
-  public getCinemas(){
+  public getCinemas():Observable<Cinema[]>{
     return this.http.get<Cinema[]>(environment.host+ '/cinema/all');
   }
 

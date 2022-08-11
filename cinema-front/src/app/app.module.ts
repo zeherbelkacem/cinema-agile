@@ -21,7 +21,6 @@ import { DeleteCinemaComponent } from './admin/components/delete-cinema/delete-c
 import { UpdateCityComponent } from './admin/components/update-city/update-city.component';
 
 import { SaveMovieComponent } from './admin/components/save-movie/save-movie.component';
-import { TestImageComponent } from './admin/components/test-image/test-image.component';
 
 
 @NgModule({
@@ -41,9 +40,8 @@ import { TestImageComponent } from './admin/components/test-image/test-image.com
     UpdateCinemaComponent,
     DeleteCinemaComponent,
     UpdateCityComponent,
-  ,
-    SaveMovieComponent,
-    TestImageComponent
+
+    SaveMovieComponent
   ],
   imports: [
     BrowserModule,

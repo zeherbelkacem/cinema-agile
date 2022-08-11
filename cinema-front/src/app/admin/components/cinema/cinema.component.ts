@@ -22,7 +22,8 @@ error = null;
   }
   getAllCinema() {
     this.cinemaService.getCinemas().subscribe({
-      next:(data)=>(this.listCinema=data),
+      next:(data)=>(this.listCinema=data, console.log(data)
+      ),
       error:(err)=>this.error=err.message,
       complete:()=>this.error=null
     })
