@@ -19,7 +19,6 @@ export class CinemaService {
   }
 
   public addCinema(cinema:Cinema){
-    console.log("cinema service");
     return this.http.post<Cinema>(
       environment.host+ '/cinema/save',
       cinema

@@ -59,7 +59,6 @@ export class SaveCinemaComponent implements OnInit {
         new City(myForm.value.city, '', 0),
         []
       );
-      console.log(this.cinema);
       this.cinemaService.addCinema(this.cinema).subscribe({
         next: (data) => console.log('ok'),
         error: (err) => console.log(err),
