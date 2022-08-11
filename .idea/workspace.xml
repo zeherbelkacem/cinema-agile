@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="83f7e2aa-c20b-4f07-bdc9-864fab3643fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/UComponents/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/UComponents/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/components/admin-home/admin-home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/components/admin-home/admin-home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/controller/CinemaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/controller/CinemaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/repository/CinemaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/repository/CinemaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/service/CinemaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/service/CinemaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/service/CinemaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-agile/src/main/java/com/fms/cinema/service/CinemaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucinema/ucinema.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucinema/ucinema.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/UComponents/ucity/ucity.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/admin/services/cinema.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/admin/services/cinema.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-front/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-front/src/app/app-routing.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

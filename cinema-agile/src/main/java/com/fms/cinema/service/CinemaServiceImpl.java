@@ -35,4 +35,6 @@ public class CinemaServiceImpl implements CinemaService {
     }
 
     public List<Cinema> getCinemaByKeyWord(String keyWord){ return cinemaRepository.findByNameContains(keyWord);}
+
+    public List<Cinema> getCinemaByCityId(Long id){return cinemaRepository.findByCityId(id);}
 }

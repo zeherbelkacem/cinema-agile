@@ -12,6 +12,7 @@ import { UpdateCityComponent } from './admin/components/update-city/update-city.
 import { HomeComponent } from './UComponents/home/home.component';
 import { LoginComponent } from './UComponents/login/login.component';
 import { UCinemaComponent } from './UComponents/ucinema/ucinema.component';
+import { UcityDetailsComponent } from './UComponents/ucity-details/ucity-details.component';
 import { UcityComponent } from './UComponents/ucity/ucity.component';
 import { UmoviesComponent } from './UComponents/umovies/umovies.component';
 
@@ -32,6 +33,7 @@ const routes: Routes = [
 {path : 'deleteCinema/:id',component:DeleteCinemaComponent},
 {path : 'updateCity/:id',component:UpdateCityComponent},
 {path : 'cinemas/:keyWord',component:UCinemaComponent},
+{path : 'cityDetails/:cityId',component:UcityDetailsComponent},
 
     { path: '**', redirectTo: '/404'}
 ];

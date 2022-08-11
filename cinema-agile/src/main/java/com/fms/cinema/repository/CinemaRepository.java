@@ -13,6 +13,7 @@ import java.util.List;
 public interface CinemaRepository extends JpaRepository<Cinema, Long> {
 
     List<Cinema> findByNameContains(String keyWord);
+    List<Cinema> findByCityId(Long id);
 
 
 }

@@ -36,4 +36,8 @@ export class CinemaService {
   public getCinemasByKeyWord(keyWord : string){
     return this.http.get<Cinema[]>(environment.host+'/cinema/getByKeyWord/'+keyWord);
   }
+
+  public getCinemasByCityId(cityId : number){
+    return this.http.get<Cinema[]>(environment.host+"/cinema/getByCityId/"+ cityId);
+  }
 }

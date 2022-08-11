@@ -49,4 +49,9 @@ public class CinemaController {
     public List<Cinema> getCinemaByKeyword(@PathVariable("keyWord")String keyWord){
         return cinemaService.getCinemaByKeyWord(keyWord);
     }
+
+    @GetMapping("/getByCityId/{id}")
+    public List<Cinema> getCinemaByCityId(@PathVariable("id")Long id){
+        return cinemaService.getCinemaByCityId(id);
+    }
 }

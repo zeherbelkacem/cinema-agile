@@ -18,4 +18,6 @@ public interface CinemaService {
 
     public List<Cinema> getCinemaByKeyWord(String keyWord);
 
+    public List<Cinema> getCinemaByCityId(Long id);
+
 }

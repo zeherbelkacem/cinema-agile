@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CinemaService } from 'src/app/admin/services/cinema.service';
 import { CityService } from 'src/app/admin/services/city.service';
 
@@ -18,7 +19,7 @@ error = null;
   cinema: any;
  
 
-  constructor(private cityService : CityService,private cinemaService : CinemaService) {}
+  constructor(private cityService : CityService,private cinemaService : CinemaService, private router : Router) {}
 
   ngOnInit(): void {
     this.getAllCity();
@@ -40,6 +41,10 @@ getAllCinema(){
     complete : () => this.error = null
   })
 
+  }
+
+  onSelect(cityId : number){
+    this.router.navigateByUrl("/cityDetails/"+ cityId);
   }
  
 
