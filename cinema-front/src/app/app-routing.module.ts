@@ -31,6 +31,7 @@ const routes: Routes = [
 {path : 'updateCinema/:id',component:UpdateCinemaComponent},
 {path : 'deleteCinema/:id',component:DeleteCinemaComponent},
 {path : 'updateCity/:id',component:UpdateCityComponent},
+{path : 'cinemas/:keyWord',component:UCinemaComponent},
 
     { path: '**', redirectTo: '/404'}
 ];

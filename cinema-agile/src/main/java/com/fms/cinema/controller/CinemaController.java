@@ -44,4 +44,9 @@ public class CinemaController {
     public Cinema getCinemaById(@PathVariable("id")long id){
         return cinemaService.getCinemaById(id).orElseThrow(()-> new RecordNotFoundException("Le cinema d'id " + id + " n'existe pas"));
     }
+
+    @GetMapping("/getByKeyWord/{keyWord}")
+    public List<Cinema> getCinemaByKeyword(@PathVariable("keyWord")String keyWord){
+        return cinemaService.getCinemaByKeyWord(keyWord);
+    }
 }

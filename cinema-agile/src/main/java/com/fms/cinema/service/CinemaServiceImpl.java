@@ -33,4 +33,6 @@ public class CinemaServiceImpl implements CinemaService {
     public void deleteCinemaById(long id) {
         cinemaRepository.deleteById(id);
     }
+
+    public List<Cinema> getCinemaByKeyWord(String keyWord){ return cinemaRepository.findByNameContains(keyWord);}
 }
