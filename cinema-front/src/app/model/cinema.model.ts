@@ -11,7 +11,7 @@ export class Cinema {
     movies : Array<Movie>;
 
     constructor(id:number, name:string,address:Address,city:City,movies:Array<Movie>){
-        this.id=0;
+        this.id=id;
         this.name=name;
         this.address=address;
         this.city=city;
