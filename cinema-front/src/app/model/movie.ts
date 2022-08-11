@@ -9,8 +9,8 @@ export interface Movie {
     production: string;
     releaseDate: Date;
     duration: Time;
-    image: File;
-    //image: FileHandle;
+    //image: File;
+    imageModel: FileHandle;
     category: Category;
 
 }

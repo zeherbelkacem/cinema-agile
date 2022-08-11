@@ -47,12 +47,14 @@
   </div>
   <div class="container">
     <div class="row row-cols-1 row-cols-md-4 g-2 mt-5">
-      <div class="col mb-5 d-flex justify-content-center" *ngFor="let m of listMovies">
+      <div class="col mb-5 d-flex justify-content-center"  *ngFor="let m of listMovies; let i = index">
         <div class="card">
-          <img src="{{ m.image }}" class="card-img-top" alt="..." />
+            <div *ngIf=imageOfMovie>
+                <img [src]="imageOfMovie[i]" class="card-img-top" alt="..." />
+            </div>
           <div class="card-body">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item h3" >{{ m.image }}</li>
+              <li class="list-group-item h3" >{{ m.title }}</li>
               <li
                 class="list-group-item"
                 th:text="'SYNOPSY : '"

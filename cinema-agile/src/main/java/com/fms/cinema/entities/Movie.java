@@ -6,13 +6,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -43,7 +37,9 @@ public class Movie implements Serializable {
 
     private LocalTime duration;
 
-    private String image;
+//    private String image;
+    @OneToOne
+    private Image imageModel;
 
     @ManyToOne
     private Category category;
@@ -52,4 +48,7 @@ public class Movie implements Serializable {
     @ManyToMany(mappedBy = "movies", fetch =  FetchType.EAGER)
     private List<Cinema> cinemas = new ArrayList<Cinema>();
 
+    public void setImage(Image image) {
+        this.imageModel = image;
+    }
 }

@@ -15,11 +15,19 @@ export class MovieService {
    * @param movie 
    * @returns 
    */
-  saveMovie(movie: Movie): Observable<Movie> {
+  saveMovie(movie: FormData): Observable<Movie> {
     console.log(movie);
 
-    return this.http.post<Movie>(environment.hostMovie + '/new', movie);
+    return this.http.post<Movie>(environment.hostMovie + '/save', movie);
   }
+
+
+  // saveMovie(movie: Movie): Observable<Movie> {
+  //   console.log(movie);
+
+  //   return this.http.post<Movie>(environment.hostMovie + '/new', movie);
+  // }
+
 
   getAllMovies():Observable<Movie[]> {
    return this.http.get<Movie[]>(environment.hostMovie+"/all");

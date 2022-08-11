@@ -1,13 +1,21 @@
 package com.fms.cinema.controller;
 
 import com.fms.cinema.entities.City;
+import com.fms.cinema.entities.Image;
 import com.fms.cinema.entities.Movie;
 import com.fms.cinema.service.CategoryService;
 import com.fms.cinema.service.CityServiceImpl;
+import com.fms.cinema.service.ImageService;
 import com.fms.cinema.service.MovieService;
+import com.fms.cinema.util.ImageUtility;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @CrossOrigin("*")
@@ -15,6 +23,8 @@ import java.util.List;
 @RequestMapping("/movie")
 public class MovieController {
 
+    @Autowired
+    private ImageService imageService;
     @Autowired
     private MovieService movieService;
 
@@ -27,6 +37,29 @@ public class MovieController {
     @PostMapping("/new")
     public Movie add(@RequestBody Movie movie) {
         return movieService.addMovie(movie);
+    }
+
+    /**
+     * Ajouter un film en utilisant une api image
+     * @param movie
+     * @param file
+     * @return
+     * @throws IOException
+     */
+    @PostMapping(value = {"/save"}, consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    public Movie saveTraining(@RequestPart("movie") Movie movie, @RequestPart("imageFile") MultipartFile file)
+            throws IOException {
+        System.out.println(movie);
+        System.out.println(file.getName());
+        Image image = imageService.saveImage(Image.builder()
+                .name(file.getOriginalFilename())
+                .type(file.getContentType())
+                .image(ImageUtility.compressImage(file.getBytes())).build());
+        movie.setImage(image);
+        return movieService.addMovie(movie);
+//        return ResponseEntity.status(HttpStatus.OK)
+//                .body(new ImageUploadResponse("Image uploaded successfully: " +
+//                        file.getOriginalFilename()));
     }
 
     /**
@@ -77,6 +110,7 @@ public class MovieController {
 
     /**
      * Return list of all movie
+     *
      * @return
      */
     @GetMapping("/all")

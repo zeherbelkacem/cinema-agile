@@ -15,6 +15,7 @@ import { CityComponent } from './admin/components/city/city.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
 import { MovieComponent } from './admin/components/movie/movie.component';
 import { SaveMovieComponent } from './admin/components/save-movie/save-movie.component';
+import { TestImageComponent } from './admin/components/test-image/test-image.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { SaveMovieComponent } from './admin/components/save-movie/save-movie.com
     AdminHomeComponent,
     CityComponent,
     MovieComponent,
-    SaveMovieComponent
+    SaveMovieComponent,
+    TestImageComponent
   ],
   imports: [
     BrowserModule,

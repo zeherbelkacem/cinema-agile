@@ -47,14 +47,11 @@
           </select>
         </div>
         <div class="mb-5">
-          <label for="Image" class="form-label">Associated image</label>
-          <input
-            class="form-control"
-            type="file"
-            formControlName="image"
-            (change)="readUrl($event)"
-          />
-          <div class="bg-secondary mt-1"><img [src]="url" /></div>
+            <div class="form-group">
+                <input type="file" (change)="onImageUpload($event)">
+                <!-- <input type="button" (click)="imageUploadAction()" value="Upload Image" class="btn1"> -->
+            </div>
+          <div class="bg-secondary mt-2" ><img [src]="url" /></div>
         </div>
 
         <button type="submit" class="btn btn-primary">Save</button>
