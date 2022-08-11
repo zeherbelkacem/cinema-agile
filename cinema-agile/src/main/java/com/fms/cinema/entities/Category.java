@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,5 +25,6 @@ public class Category implements Serializable{
     private String name;
 
     @OneToMany(mappedBy = "category")
+    @JsonIgnore
     private List<Movie> movies = new ArrayList<Movie>();
 }

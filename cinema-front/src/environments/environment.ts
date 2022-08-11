@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  host : "http://localhost:8080/api"
+  host : "http://localhost:8080/api",
+  hostMovie : "http://localhost:8080/api/movie",
+  hostCat : "http://localhost:8080/api/category"
 };
 
 /*

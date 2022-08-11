@@ -7,13 +7,14 @@ import { UcityComponent } from './UComponents/ucity/ucity.component';
 import { UmoviesComponent } from './UComponents/umovies/umovies.component';
 import { HomeComponent } from './UComponents/home/home.component';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormGroupName, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './UComponents/login/login.component';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
 import { CityComponent } from './admin/components/city/city.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
 import { MovieComponent } from './admin/components/movie/movie.component';
+import { SaveMovieComponent } from './admin/components/save-movie/save-movie.component';
 
 
 @NgModule({
@@ -27,14 +28,16 @@ import { MovieComponent } from './admin/components/movie/movie.component';
     LoginComponent,
     AdminHomeComponent,
     CityComponent,
-    MovieComponent
+    MovieComponent,
+    SaveMovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    HttpClientModule
 
   ],
   providers: [],
